@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <rect width="512" height="512" fill="#0032A0" rx="100" />
+  <g transform="translate(80, 60)">
+    <!-- Soccer ball -->
+    <circle cx="176" cy="176" r="100" fill="white" />
+    <path d="M176,76 L176,276" stroke="black" stroke-width="2" />
+    <path d="M76,176 L276,176" stroke="black" stroke-width="2" />
+    <path d="M106,106 L246,246" stroke="black" stroke-width="2" />
+    <path d="M106,246 L246,106" stroke="black" stroke-width="2" />
+    <circle cx="176" cy="176" r="100" fill="none" stroke="black" stroke-width="2" />
+    
+    <!-- Serie A text -->
+    <text x="175" y="320" font-family="'Roboto Condensed', sans-serif" font-size="54" font-weight="bold" fill="white" text-anchor="middle">SERIE A</text>
+    <text x="175" y="370" font-family="'Roboto Condensed', sans-serif" font-size="36" font-weight="bold" fill="white" text-anchor="middle">INSIDER</text>
+  </g>
+</svg>
