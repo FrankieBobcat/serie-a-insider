@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom animation for soccer ball */
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.soccer-ball-spin {
+  animation: slow-spin 4s linear infinite;
+}
+
+.soccer-ball-hover {
+  transition: transform 0.3s ease;
+}
+
+.soccer-ball-hover:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile app styles */
+body {
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: contain;
+  touch-action: pan-x pan-y;
+}
+
+/* Add iOS-style momentum scrolling */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+/* Pull to refresh animation */
+@keyframes pull-refresh {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.pull-indicator {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  animation: pull-refresh 1.5s ease-in-out infinite;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 240 63% 22%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 222 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 217 92% 51%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+    --chart-1: 221.2 83.2% 53.3%;
+    --chart-2: 0 84.2% 60.2%;
+    --chart-3: 154 90% 32%;
+    --chart-4: 240 63% 22%;
+    --chart-5: 0 0% 89%;
+    --sidebar-background: 240 63% 22%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 221.2 83.2% 53.3%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 221.2 83.2% 53.3%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 221.2 83.2% 53.3% / 30%;
+    --sidebar-ring: 221.2 83.2% 53.3%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+
+  .font-heading {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .font-accent {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+
+  .bg-serie-navy {
+    background-color: #1A1659;
+  }
+
+  .bg-serie-blue {
+    background-color: #0032A0;
+  }
+
+  .bg-serie-light-blue {
+    background-color: #0578FF;
+  }
+
+  .bg-serie-white {
+    background-color: #FFFFFF;
+  }
+
+  .bg-serie-gray {
+    background-color: #E2E2E2;
+  }
+
+  .bg-serie-green {
+    background-color: #00A346;
+  }
+
+  .bg-serie-red {
+    background-color: #DB052B;
+  }
+
+  .text-serie-navy {
+    color: #1A1659;
+  }
+
+  .text-serie-blue {
+    color: #0032A0;
+  }
+
+  .text-serie-light-blue {
+    color: #0578FF;
+  }
+
+  .text-serie-white {
+    color: #FFFFFF;
+  }
+
+  .text-serie-gray {
+    color: #E2E2E2;
+  }
+
+  .text-serie-green {
+    color: #00A346;
+  }
+
+  .text-serie-red {
+    color: #DB052B;
+  }
+
+  .border-serie-navy {
+    border-color: #1A1659;
+  }
+
+  .border-serie-blue {
+    border-color: #0032A0;
+  }
+
+  .border-serie-light-blue {
+    border-color: #0578FF;
+  }
+
+  .border-serie-white {
+    border-color: #FFFFFF;
+  }
+
+  .border-serie-gray {
+    border-color: #E2E2E2;
+  }
+
+  .border-serie-green {
+    border-color: #00A346;
+  }
+
+  .border-serie-red {
+    border-color: #DB052B;
+  }
+
+  .from-serie-navy {
+    --tw-gradient-from: #1A1659 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(26 22 89 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .from-serie-blue {
+    --tw-gradient-from: #0032A0 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(0 50 160 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  }
+
+  .to-serie-blue {
+    --tw-gradient-to: #0032A0 var(--tw-gradient-to-position);
+  }
+
+  .to-serie-light-blue {
+    --tw-gradient-to: #0578FF var(--tw-gradient-to-position);
+  }
+
+  /* Custom scrollbar */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #0032A0;
+    border-radius: 3px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #E2E2E2;
+  }
+  
+  /* Animation for match ticker */
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  .ticker-animation {
+    animation: ticker 30s linear infinite;
+  }
+}
